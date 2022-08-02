@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- beanxml(creating bean) -->
+<bean id="bike" class="com.spring.day11.beanxml.Bike"></bean>
+<bean id="car" class="com.spring.day11.beanxml.Car"></bean>
+
+<!-- beanProp -->
+<bean id="emp" class="com.spring.day11.beanProp.Employee">
+<property name="id" value="101"></property>
+<property name="name" value="reethik"></property>
+<property name="salary" value="50000"></property></bean>
+
+<!-- di_con -->
+
+
+<!-- di_set -->
+<bean id="emp1" class="com.spring.day11.di_set.Employee">
+	<property name="emp_id" value="101"></property>
+	<property name="emp_name" value="Dheeraj"></property>
+	<property name="emp_city" value="kakinada"></property>
+	</bean>
+	
+<!-- auto-wire  -->
+	<bean id="b1" class="com.spring.day11.autowire.Class_B"></bean>
+	<bean id="b" class="com.spring.day11.autowire.Class_B"></bean>
+	<bean id="a" class="com.spring.day11.autowire.Class_A" autowire="byName"></bean>
+	
+</beans>
